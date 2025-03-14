@@ -1,9 +1,10 @@
 #include "graph.h"
 
 #include <iostream>
+#include <filesystem>
 
 int main() {
-    std::ifstream file("data/graph.txt");
+    std::ifstream file(std::filesystem::path(PROJECT_ROOT) / "data/graph.txt");
 
     if (file) {
         try {
